@@ -44,8 +44,7 @@ const defaultMenu = {
 │
 │ Uptime: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
+│ 
 ╰────
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
@@ -60,7 +59,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let wabot-aq02 = './src/photo/JdA.png'
-    let bp02 = 'https://github.com/bintangp02'
+    let bp02 = 'https://github.com/BOTCAHX'
     //let premium = global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     let tnbot = (await conn.getFile(await conn.getProfilePicture(m.fromMe))).data.toString('base64')
     let { exp, limit, level, role } = global.db.data.users[m.sender]
